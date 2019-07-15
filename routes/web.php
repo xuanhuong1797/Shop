@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
+    Route::get('/index', 'AdminController@index')->name('index');
+    
+});
+
+Route::prefix('product')->namespace('Product')->name('product.')->group(function () {
+    Route::get('/details', 'ProductController@details')->name('details');
+    Route::get('/cart', 'ProductController@cart')->name('cart');
 });
