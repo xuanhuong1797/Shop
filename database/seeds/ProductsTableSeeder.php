@@ -21,6 +21,7 @@ class ProductsTableSeeder extends Seeder
                 $product->name = $faker->text(15);
                 $product->price = $faker->randomNumber(5);
                 $product->description = $faker->text();
+                $product->quantity = $faker->randomNumber(3);
                 $product->category_id = $j;
                 $product->brand_id = $faker->numberBetween(1, 7);
                 $product->save();
