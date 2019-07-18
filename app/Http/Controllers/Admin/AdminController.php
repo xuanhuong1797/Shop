@@ -12,4 +12,8 @@ class AdminController extends Controller
         // todo
         return view('admin.index');
     }
+    public function showUser(){
+        // todo
+        return view('admin.users.show');
+    }
 }

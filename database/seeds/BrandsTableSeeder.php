@@ -1,10 +1,10 @@
 <?php
 
+use App\Models\Brand;
 use Illuminate\Database\Seeder;
-use App\Models\Category;
 use Faker\Factory as Faker;
 
-class CategoriesTableSeeder extends Seeder
+class BrandsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,8 +15,8 @@ class CategoriesTableSeeder extends Seeder
     {
         //
         $faker = Faker::create();
-        for ($i=0; $i < 10; $i++) {
-            Category::create([
+        for ($i=0; $i < 7; $i++) {
+            Brand::create([
                 'name'=>$faker->name,
             ]);
         }
