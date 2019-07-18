@@ -20,4 +20,15 @@ class User extends Model
         'remember_token',
         'updated_at',
     ];
+    public function order()
+    {
+        return $this->hasMany('App\Models\Order');
+    }
+    
+    public function love()
+    {
+        return $this->hasMany('App\Models\Love ');
+    }
+    
 }
+

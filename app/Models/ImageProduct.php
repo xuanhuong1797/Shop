@@ -14,7 +14,7 @@ class ImageProduct extends Model
     
     public function product()
     {
-        return $this->belongsTo(Product::class, 'product_id');
+        return $this->belongsTo('App\Models\Product');
     }
     
     public function scopeFindProduct($query, $idProduct)
